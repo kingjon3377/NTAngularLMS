@@ -31,9 +31,10 @@
             <a class="edit" href="#" title="Edit Borrower" data-toggle="tooltip">
               <i class="material-icons">edit</i>
             </a>
-            <a class="delete" href="#" title="Delete Borrower" data-toggle="tooltip">
+            <button class="delete" title="Delete Borrower"
+              data-toggle="tooltip" (click)="deleteBorrower(author.cardNo)">
               <i class="material-icons">delete</i>
-            </a>
+            </button>
           </td>
         </tr>
       </tbody>

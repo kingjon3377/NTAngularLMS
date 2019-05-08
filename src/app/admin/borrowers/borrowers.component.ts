@@ -20,4 +20,14 @@ export class BorrowersComponent implements OnInit {
       this.authors = res;
     });
   }
+
+  deleteBorrower(id) {
+    this.adminService.deleteBorrower(id).subscribe(res => {
+      console.log("Successfully deleted!");
+      this.adminService.getAllBorrowers().subscribe(res => {
+        console.log("updated Borrower Table Successfully!");
+        this.authors = res;
+      });
+    });
+  }
 }

@@ -16,4 +16,13 @@ export class AdminService {
       environment.get_all_borrowers
     );
   }
+
+  deleteBorrower(id) {
+    return this.http.delete(
+      environment.api_endpoint +
+      environment.admin_endpoint +
+      environment.deleteBorrower +
+      id
+    );
+  }
 }
