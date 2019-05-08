@@ -21,6 +21,8 @@ import { ReturnComponent } from './borrower/return/return.component';
 import { LibrarianComponent } from './librarian/librarian.component';
 import { CopiesComponent } from './librarian/copies/copies.component';
 import { LoginComponent } from './admin/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { LoginComponent } from './admin/login/login.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
