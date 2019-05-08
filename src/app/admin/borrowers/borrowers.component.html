@@ -1,3 +1,42 @@
-<p>
-  borrowers works!
-</p>
+
+<div class="adminDash_right">
+  <div class="adminTable table-responsive">    
+    <div class="table-title">
+      <h3>Borrowers</h3>
+      <!-- <a href="#">
+        <button class="addButton">
+          <i class="material-icons">add</i>
+          Add New
+        </button>
+      </a> -->
+    </div>
+    
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let author of authors; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{author.name}}</td>
+          <td>{{author.address}}</td>
+          <td>{{author.phone}}</td>
+          <td class="table_buttons">
+            <a class="edit" href="#" title="Edit Borrower" data-toggle="tooltip">
+              <i class="material-icons">edit</i>
+            </a>
+            <a class="delete" href="#" title="Delete Borrower" data-toggle="tooltip">
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

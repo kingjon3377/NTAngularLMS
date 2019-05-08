@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_endpoint: 'http://localhost:8080',
+  admin_endpoint: '',
+  get_all_authors: '/authors',
+  get_all_borrowers: '/borrowers',
+  deleteAuthor: '/deleteAuthor/'
 };
 
 /*
