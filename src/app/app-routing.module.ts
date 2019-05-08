@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AdminComponent } from './admin/admin.component';
+import { AuthorsComponent } from './admin/authors/authors.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,12 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    children: []
+    children: [
+      {
+        path: 'authors',
+        component: AuthorsComponent
+      }
+    ]
   }
 ];
 
