@@ -29,7 +29,9 @@ export class BorrowersComponent implements OnInit {
   }
 
   getAllBorrowers() {
+    console.log("attempting to get all borrowers");
     this.adminService.getAllBorrowers().subscribe(res => {
+      console.log("Got all borrowers");
       this.authors = res;
     });
   }
