@@ -25,4 +25,17 @@ export class AdminService {
       id
     );
   }
+
+  createBorrower(body) {
+    return this.http.post(
+      environment.api_endpoint +
+      environment.admin_endpoint +
+      environment.createBorrower + "?name=" +
+      body.name + "&address=" + body.address +
+      "&phone=" + body.phone,
+      // Second parameter is an object you want to pass to the server,
+      // it does not have to be JSON stringify
+      {}
+    );
+  }
 }

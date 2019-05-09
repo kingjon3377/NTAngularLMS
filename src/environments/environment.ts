@@ -9,6 +9,7 @@ export const environment = {
   get_all_authors: '/authors',
   get_all_borrowers: '/borrowers',
   deleteBorrower: '/borrower/',
+  createBorrower: '/borrower',
   deleteAuthor: '/deleteAuthor/'
 };
 
