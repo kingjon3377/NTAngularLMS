@@ -19,17 +19,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let author of authors; index as i">
+        <tr *ngFor="let borrower of borrowers; index as i">
           <th scope="row">{{i+1}}</th>
-          <td>{{author.name}}</td>
-          <td>{{author.address}}</td>
-          <td>{{author.phone}}</td>
+          <td>{{borrower.name}}</td>
+          <td>{{borrower.address}}</td>
+          <td>{{borrower.phone}}</td>
           <td class="table_buttons">
             <a class="edit" href="#" title="Edit Borrower" data-toggle="tooltip">
               <i class="material-icons">edit</i>
             </a>
             <button class="delete" title="Delete Borrower"
-              data-toggle="tooltip" (click)="deleteBorrower(author.cardNo)">
+              data-toggle="tooltip" (click)="deleteBorrower(borrower.cardNo)">
               <i class="material-icons">delete</i>
             </button>
           </td>

@@ -14,7 +14,7 @@ export class BorrowersComponent implements OnInit {
     private adminService: AdminService,
     private modalService: NgbModal) { }
   
-  authors: any;
+    borrowers: any;
 
   private modalReference: NgbModalRef;
 
@@ -32,7 +32,7 @@ export class BorrowersComponent implements OnInit {
     console.log("attempting to get all borrowers");
     this.adminService.getAllBorrowers().subscribe(res => {
       console.log("Got all borrowers");
-      this.authors = res;
+      this.borrowers = res;
     });
   }
 
@@ -41,7 +41,7 @@ export class BorrowersComponent implements OnInit {
       console.log("Successfully deleted!");
       this.adminService.getAllBorrowers().subscribe(res => {
         console.log("updated Borrower Table Successfully!");
-        this.authors = res;
+        this.borrowers = res;
       });
     });
   }
@@ -52,7 +52,7 @@ export class BorrowersComponent implements OnInit {
       console.log("Successfully created a Borrower");
       this.adminService.getAllBorrowers().subscribe(res => {
         console.log("updated Borrower Table Successfully!");
-        this.authors = res;
+        this.borrowers = res;
         // reset the borrower form
         this.newBorrower = new Borrower(0, '', '', '');
         // also close modal
