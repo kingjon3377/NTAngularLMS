@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   api_endpoint: 'http://localhost:8080',
-  get_all_authors: '/authors'
+  get_all_authors: '/authors',
+  single_author: '/author'
 };
 
 /*
