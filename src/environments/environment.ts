@@ -10,7 +10,8 @@ export const environment = {
   get_all_borrowers: '/borrowers',
   deleteBorrower: '/borrower/',
   createBorrower: '/borrower',
-  deleteAuthor: '/deleteAuthor/'
+  deleteAuthor: '/deleteAuthor/',
+  updateBorrower: '/borrower/'
 };
 
 /*

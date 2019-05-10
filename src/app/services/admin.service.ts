@@ -38,4 +38,14 @@ export class AdminService {
       {}
     );
   }
+
+  updateBorrower(borrower) {
+    return this.http.put(
+      environment.api_endpoint +
+      environment.admin_endpoint +
+      environment.updateBorrower +
+      borrower.cardNo,
+      borrower
+    )
+  }
 }
