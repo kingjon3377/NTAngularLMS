@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewAuthorComponent } from './admin/authors/new/new.component';
+import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -47,10 +48,12 @@ import { NewAuthorComponent } from './admin/authors/new/new.component';
     LibrarianComponent,
     CopiesComponent,
     LoginComponent,
-    NewAuthorComponent
+    NewAuthorComponent,
+    AuthorDeleteComponent
   ],
   entryComponents: [
-    NewAuthorComponent
+    NewAuthorComponent,
+    AuthorDeleteComponent
   ],
   imports: [
     BrowserModule,
