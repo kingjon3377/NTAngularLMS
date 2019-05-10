@@ -21,7 +21,7 @@ export class AdminService {
     return this.http.delete(
       environment.api_endpoint +
       environment.admin_endpoint +
-      environment.deleteBorrower +
+      environment.borrower_api +
       id
     );
   }
@@ -30,7 +30,7 @@ export class AdminService {
     return this.http.post(
       environment.api_endpoint +
       environment.admin_endpoint +
-      environment.createBorrower + "?name=" +
+      environment.borrower_api + "?name=" +
       body.name + "&address=" + body.address +
       "&phone=" + body.phone,
       // Second parameter is an object you want to pass to the server,
@@ -43,7 +43,7 @@ export class AdminService {
     return this.http.put(
       environment.api_endpoint +
       environment.admin_endpoint +
-      environment.updateBorrower +
+      environment.borrower_api +
       borrower.cardNo,
       borrower
     )

@@ -8,10 +8,8 @@ export const environment = {
   admin_endpoint: '',
   get_all_authors: '/authors',
   get_all_borrowers: '/borrowers',
-  deleteBorrower: '/borrower/',
-  createBorrower: '/borrower',
-  deleteAuthor: '/deleteAuthor/',
-  updateBorrower: '/borrower/'
+  borrower_api: '/borrower/',
+  deleteAuthor: '/deleteAuthor/'
 };
 
 /*
