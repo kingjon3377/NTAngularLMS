@@ -35,7 +35,7 @@ export class BorrowersComponent implements OnInit {
     this.adminService.getAllBorrowers().subscribe(res => {
       console.log("Got all borrowers");
       this.borrowers = res;
-    });
+    }, error => console.log(error));
   }
 
   deleteBorrower(id) {
@@ -44,8 +44,8 @@ export class BorrowersComponent implements OnInit {
       this.adminService.getAllBorrowers().subscribe(res => {
         console.log("updated Borrower Table Successfully!");
         this.borrowers = res;
-      });
-    });
+      }, error => console.log(error));
+    }, error => console.log(error));
   }
 
   createBorrower() {
@@ -59,8 +59,8 @@ export class BorrowersComponent implements OnInit {
         this.newBorrower = new Borrower(0, '', '', '');
         // also close modal
         this.modalReference.close();
-      });
-    });
+      }, error => console.log(error));
+    }, error => console.log(error));
   }
 
   updateBorrower() {
@@ -72,8 +72,8 @@ export class BorrowersComponent implements OnInit {
         this.borrowers = res;
         // also close modal
         this.modalReference.close();
-      });
-    });
+      }, error => console.log(error));
+    }, error => console.log(error));
   }
   
   resetBorrower() {
