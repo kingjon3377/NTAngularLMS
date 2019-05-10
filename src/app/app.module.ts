@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewAuthorComponent } from './admin/authors/new/new.component';
+import { AuthorEditComponent } from './admin/authors/edit/edit.component';
 import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
 
 @NgModule({
@@ -49,10 +50,12 @@ import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
     CopiesComponent,
     LoginComponent,
     NewAuthorComponent,
+    AuthorEditComponent,
     AuthorDeleteComponent
   ],
   entryComponents: [
     NewAuthorComponent,
+    AuthorEditComponent,
     AuthorDeleteComponent
   ],
   imports: [
