@@ -27,6 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewAuthorComponent } from './admin/authors/new/new.component';
 import { AuthorEditComponent } from './admin/authors/edit/edit.component';
 import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
+import { NewBranchComponent } from './admin/branches/new/new.component';
 
 @NgModule({
   declarations: [
@@ -51,12 +52,14 @@ import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
     LoginComponent,
     NewAuthorComponent,
     AuthorEditComponent,
-    AuthorDeleteComponent
+    AuthorDeleteComponent,
+    NewBranchComponent
   ],
   entryComponents: [
     NewAuthorComponent,
     AuthorEditComponent,
-    AuthorDeleteComponent
+    AuthorDeleteComponent,
+    NewBranchComponent
   ],
   imports: [
     BrowserModule,
