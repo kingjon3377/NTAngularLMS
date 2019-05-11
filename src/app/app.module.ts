@@ -29,6 +29,7 @@ import { AuthorEditComponent } from './admin/authors/edit/edit.component';
 import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
 import { NewBranchComponent } from './admin/branches/new/new.component';
 import { BranchEditComponent } from './admin/branches/edit/edit.component';
+import { BranchDeleteComponent } from './admin/branches/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -55,14 +56,16 @@ import { BranchEditComponent } from './admin/branches/edit/edit.component';
     AuthorEditComponent,
     AuthorDeleteComponent,
     NewBranchComponent,
-    BranchEditComponent
+    BranchEditComponent,
+    BranchDeleteComponent
   ],
   entryComponents: [
     NewAuthorComponent,
     AuthorEditComponent,
     AuthorDeleteComponent,
     NewBranchComponent,
-    BranchEditComponent
+    BranchEditComponent,
+    BranchDeleteComponent
   ],
   imports: [
     BrowserModule,
