@@ -1,0 +1,26 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="createAuthorHeader">Create Author</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+          (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form class="form-horizontal" #createAuthorForm="ngForm" (ngSubmit)="createAuthor()">
+        <label for="authorName">Author Name</label>
+        <input type="text" name="authorName" #authorName="ngModel" [(ngModel)]="currentAuthorName" required
+          minlength="1" maxlength="20"><br />
+        <div *ngIf="authorName.invalid && (authorName.dirty || authorName.touched)" class="alert alert-danger">
+          <div *ngIf="authorName.errors.required || authorName.errors.minlength">Author must have a name.</div>
+          <div *ngIf="authorName.errors.maxlength">Author name too long.</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.dismiss('Close clicked')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create Author</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

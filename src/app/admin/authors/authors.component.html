@@ -1,3 +1,33 @@
-<p>
-  authors works!
-</p>
+<div class="adminTable table-responsive">
+  <div class="table-title">
+    <h3>Authors</h3>
+    <button type="button" class="addButton" (click)="openAddModal()">
+      <i class="material-icons">add</i>
+      Add New
+    </button>
+  </div>
+
+  <table class="table table-hover table-bordered" id="authorsTable">
+    <thead>
+      <tr>
+        <th scope="col">Author Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let author of authors">
+        <td>{{author.id}}</td>
+        <td>{{author.name}}</td>
+        <td>
+          <a class="edit" (click)="showEditForm(author)" title="Edit Author" data-toggle="tooltip">
+            <i class="material-icons">edit</i>
+          </a>
+          <a class="delete" (click)="confirmDelete(author)" title="Delete Author" data-toggle="tooltip">
+            <i class="material-icons">delete</i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
