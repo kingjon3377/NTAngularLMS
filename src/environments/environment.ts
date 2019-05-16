@@ -9,7 +9,10 @@ export const environment = {
   get_all_authors: '/authors',
   get_all_borrowers: '/borrowers',
   borrower_api: '/borrower/',
-  deleteAuthor: '/deleteAuthor/'
+  book_api: '/book/',
+  branch_api: '/branch/',
+  deleteAuthor: '/deleteAuthor/',
+  get_all_loans: '/loans'
 };
 
 /*

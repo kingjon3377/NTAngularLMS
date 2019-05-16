@@ -48,4 +48,27 @@ export class AdminService {
       borrower
     );
   }
+
+  getAllLoans(cardNo) {
+    return this.http.get(
+      environment.borrower_temp_api_endpoint +
+      environment.admin_endpoint +
+      environment.get_all_borrowers + '/' +
+      cardNo +
+      environment.get_all_loans
+    );
+  }
+
+  updateLoan(bookId: number, branchId: number, cardNo: number, overrideDate) {
+    return this.http.put(
+      environment.api_endpoint +
+      environment.admin_endpoint + '/loan' +
+      environment.book_api + bookId +
+      environment.branch_api + branchId +
+      environment.borrower_api + cardNo + '/due?dueDate=' + overrideDate,
+      // Second parameter is an object you want to pass to the server,
+      // it does not have to be JSON stringify
+      {}
+    );
+  }
 }

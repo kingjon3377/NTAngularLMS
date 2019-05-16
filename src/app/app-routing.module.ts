@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AdminComponent } from './admin/admin.component';
 import { BorrowersComponent } from './admin/borrowers/borrowers.component';
+import { DueDateComponent } from './admin/due-date/due-date.component';
+import { BorrowersLoanComponent } from './admin/due-date/borrowers-loan/borrowers-loan.component';
 
 const routes: Routes = [
   {
@@ -17,6 +19,14 @@ const routes: Routes = [
       {
         path: 'borrowers',
         component: BorrowersComponent
+      },
+      {
+        path: 'borrowers/:id/dueDate',
+        component: DueDateComponent
+      },
+      {
+        path: 'borrowerDueDate',
+        component: BorrowersLoanComponent
       }
     ]
   }

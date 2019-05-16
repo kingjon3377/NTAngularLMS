@@ -24,6 +24,7 @@ import { LoginComponent } from './admin/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BorrowersLoanComponent } from './admin/due-date/borrowers-loan/borrowers-loan.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReturnComponent,
     LibrarianComponent,
     CopiesComponent,
-    LoginComponent
+    LoginComponent,
+    BorrowersLoanComponent
   ],
   imports: [
     BrowserModule,
