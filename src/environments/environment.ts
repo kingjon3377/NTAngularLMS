@@ -12,7 +12,6 @@ export const environment = {
   branch_api: '/branch/',
   deleteAuthor: '/deleteAuthor/',
   get_all_loans: '/loans',
-  deleteAuthor: '/deleteAuthor/',
   get_all_authors: '/authors',
   single_author: '/author',
   get_all_branches: '/branches',

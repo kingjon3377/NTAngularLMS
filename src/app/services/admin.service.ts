@@ -51,7 +51,7 @@ export class AdminService {
 
   getAllLoans(cardNo) {
     return this.http.get(
-      environment.borrower_temp_api_endpoint +
+      environment.api_endpoint +
       environment.admin_endpoint +
       environment.get_all_borrowers + '/' +
       cardNo +
