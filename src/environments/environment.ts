@@ -6,13 +6,17 @@ export const environment = {
   production: false,
   api_endpoint: 'http://localhost:8080',
   admin_endpoint: '',
-  get_all_authors: '/authors',
   get_all_borrowers: '/borrowers',
   borrower_api: '/borrower/',
   book_api: '/book/',
   branch_api: '/branch/',
   deleteAuthor: '/deleteAuthor/',
-  get_all_loans: '/loans'
+  get_all_loans: '/loans',
+  deleteAuthor: '/deleteAuthor/',
+  get_all_authors: '/authors',
+  single_author: '/author',
+  get_all_branches: '/branches',
+  single_branch: '/branch'
 };
 
 /*
