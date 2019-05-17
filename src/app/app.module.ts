@@ -24,6 +24,7 @@ import { LoginComponent } from './admin/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BorrowersLoanComponent } from './admin/due-date/borrowers-loan/borrowers-loan.component';
 import { NewAuthorComponent } from './admin/authors/new/new.component';
 import { AuthorEditComponent } from './admin/authors/edit/edit.component';
 import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
@@ -52,6 +53,7 @@ import { BranchDeleteComponent } from './admin/branches/delete/delete.component'
     LibrarianComponent,
     CopiesComponent,
     LoginComponent,
+    BorrowersLoanComponent,
     NewAuthorComponent,
     AuthorEditComponent,
     AuthorDeleteComponent,

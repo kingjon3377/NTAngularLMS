@@ -1,0 +1,35 @@
+<div class="adminDash_right">
+  <div class="adminTable table-responsive">    
+    <div class="table-title">
+      <h3>Choose Borrower</h3>
+      <p>Choose the borrower who you
+          would like to override the due dates for</p>
+    </div>
+    
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let borrower of borrowers; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{borrower.name}}</td>
+          <td>{{borrower.address}}</td>
+          <td>{{borrower.phone}}</td>
+          <td class="table_buttons">
+            <a class="edit" title="override loans for this borrower"
+              data-toggle="tooltip" [routerLink]="['../borrowers', borrower.cardNo, 'dueDate']">
+              <i class="material-icons">edit</i>
+          </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
