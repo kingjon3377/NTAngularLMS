@@ -6,6 +6,11 @@ import { PublishersComponent } from './admin/publishers/publishers.component';
 import { BooksComponent } from './admin/books/books.component';
 import { fromEventPattern } from 'rxjs';
 import { LayoutComponent } from './admin/layout/layout.component';
+import { BorrowersComponent } from './admin/borrowers/borrowers.component';
+import { DueDateComponent } from './admin/due-date/due-date.component';
+import { BorrowersLoanComponent } from './admin/due-date/borrowers-loan/borrowers-loan.component';
+import { AuthorsComponent } from './admin/authors/authors.component';
+import { BranchesComponent} from './admin/branches/branches.component';
 
 const routes: Routes = [
   {
@@ -14,11 +19,39 @@ const routes: Routes = [
     children:[]
   },
   {
-    path: 'admin', component: AdminComponent,
+    path: 'admin',
+    component: AdminComponent,
     children: [
-      {path: 'publishers', component: PublishersComponent},
-      {path: 'books', component: BooksComponent}
-  ]}
+      {
+        path: 'borrowers',
+        component: BorrowersComponent
+      },
+      {
+        path: 'borrowers/:id/dueDate',
+        component: DueDateComponent
+      },
+      {
+        path: 'borrowerDueDate',
+        component: BorrowersLoanComponent
+      },
+      {
+        path: 'authors',
+        component: AuthorsComponent
+      },
+      {
+        path: 'branches',
+        component: BranchesComponent
+      },
+      {
+        path: 'publishers',
+        component: PublishersComponent
+      },
+      {
+        path: 'books',
+        component: BooksComponent
+      }
+    ]
+  }
 ];
   
   

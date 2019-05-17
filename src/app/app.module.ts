@@ -21,6 +21,16 @@ import { ReturnComponent } from './borrower/return/return.component';
 import { LibrarianComponent } from './librarian/librarian.component';
 import { CopiesComponent } from './librarian/copies/copies.component';
 import { LoginComponent } from './admin/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BorrowersLoanComponent } from './admin/due-date/borrowers-loan/borrowers-loan.component';
+import { NewAuthorComponent } from './admin/authors/new/new.component';
+import { AuthorEditComponent } from './admin/authors/edit/edit.component';
+import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
+import { NewBranchComponent } from './admin/branches/new/new.component';
+import { BranchEditComponent } from './admin/branches/edit/edit.component';
+import { BranchDeleteComponent } from './admin/branches/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +52,32 @@ import { LoginComponent } from './admin/login/login.component';
     ReturnComponent,
     LibrarianComponent,
     CopiesComponent,
-    LoginComponent
+    LoginComponent,
+    BorrowersLoanComponent,
+    NewAuthorComponent,
+    AuthorEditComponent,
+    AuthorDeleteComponent,
+    NewBranchComponent,
+    BranchEditComponent,
+    BranchDeleteComponent
+  ],
+  entryComponents: [
+    NewAuthorComponent,
+    AuthorEditComponent,
+    AuthorDeleteComponent,
+    NewBranchComponent,
+    BranchEditComponent,
+    BranchDeleteComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    NgbModule, // TODO: just import the modules we use
     AppRoutingModule
   ],
   providers: [],

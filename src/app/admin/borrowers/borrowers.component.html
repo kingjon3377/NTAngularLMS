@@ -1,3 +1,155 @@
-<p>
-  borrowers works!
-</p>
+<div class="adminDash_right">
+  <div class="adminTable table-responsive">    
+    <div class="table-title">
+      <h3>Borrowers</h3>
+        <button (click)="open(createBorrowerModal)" class="addButton">
+          <i class="material-icons">add</i>
+          Add New
+        </button>
+    </div>
+    
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let borrower of borrowers; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{borrower.name}}</td>
+          <td>{{borrower.address}}</td>
+          <td>{{borrower.phone}}</td>
+          <td class="table_buttons">
+            <button class="edit" title="Edit Borrower"
+              data-toggle="tooltip"
+              (click)="editModal(editBorrowerModal, borrower)">
+              <i class="material-icons">edit</i>
+            </button>
+            <button class="delete" title="Delete Borrower"
+              data-toggle="tooltip" (click)="deleteBorrower(borrower.cardNo)">
+              <i class="material-icons">delete</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- create borrower modal -->
+<ng-template #createBorrowerModal let-c="close" let-d="dismiss">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Borrower</h5>
+        <button type="button" class="close"
+          (click)="close(createBorrowerModal)">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form (ngSubmit)="createBorrower()" #borrowerForm="ngForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" required
+                name="name" [(ngModel)]="newBorrower.name" #name="ngModel"/>
+              <div [hidden]="name.valid"
+                class="alert alert-danger">
+                Name is required
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" name="address"
+                [(ngModel)]="newBorrower.address">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" class="form-control" id="phone" name="phone"
+                [(ngModel)]="newBorrower.phone" placeholder="123-456-7890"
+                pattern="[0-9]{3}[\- ]?[0-9]{3}[\- ]?[0-9]{4}" #phone="ngModel">
+              <label>ex. 123-456-7890 or 1234567890</label>
+              <div [hidden]="phone.valid || phone.pristine"
+                class="alert alert-danger">
+                Phone is formated incorrectly
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success"
+              [disabled]="!borrowerForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default"
+              (click)="resetBorrower(); borrowerForm.reset()">reset</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close(createBorrowerModal)">Close</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- update borrower modal -->
+<ng-template #editBorrowerModal let-c="close" let-d="dismiss">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="exampleModalLabel">Edit {{editBorrower.name}}</h5>
+        <button type="button" class="close"
+          (click)="close(editBorrowerModal)">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form (ngSubmit)="updateBorrower()" #borrowerForm="ngForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" required
+                name="name" [(ngModel)]="editBorrower.name" #name="ngModel"/>
+              <div [hidden]="name.valid"
+                class="alert alert-danger">
+                Name is required
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" name="address"
+                [(ngModel)]="editBorrower.address">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" class="form-control" id="phone" name="phone"
+                [(ngModel)]="editBorrower.phone" placeholder="123-456-7890"
+                pattern="[0-9]{3}[\- ]?[0-9]{3}[\- ]?[0-9]{4}" #phone="ngModel">
+              <label>ex. 123-456-7890 or 1234567890</label>
+              <div [hidden]="phone.valid || phone.pristine"
+                class="alert alert-danger">
+                Phone is formated incorrectly
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success"
+              [disabled]="!borrowerForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default"
+              (click)="resetEditBorrower(); borrowerForm.reset()">reset</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close(editBorrowerModal)">Close</button>
+      </div>
+    </div>
+  </div>
+</ng-template>
