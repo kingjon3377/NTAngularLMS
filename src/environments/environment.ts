@@ -10,7 +10,9 @@ export const environment = {
   borrower_api: '/borrower/',
   deleteAuthor: '/deleteAuthor/',
   get_all_authors: '/authors',
-  single_author: '/author'
+  single_author: '/author',
+  get_all_branches: '/branches',
+  single_branch: '/branch'
 };
 
 /*

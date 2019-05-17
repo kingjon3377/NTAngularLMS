@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AdminComponent } from './admin/admin.component';
 import { BorrowersComponent } from './admin/borrowers/borrowers.component';
 import { AuthorsComponent } from './admin/authors/authors.component';
+import { BranchesComponent} from './admin/branches/branches.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'authors',
         component: AuthorsComponent
+      },
+      {
+        path: 'branches',
+        component: BranchesComponent
       }
     ]
   }
