@@ -60,6 +60,10 @@ import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgbModule,
     HttpClientModule,
     FormsModule,
     NgbModule, // TODO: just import the modules we use

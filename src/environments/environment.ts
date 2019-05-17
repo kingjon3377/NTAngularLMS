@@ -5,6 +5,10 @@
 export const environment = {
   production: false,
   api_endpoint: 'http://localhost:8080',
+  admin_endpoint: '',
+  get_all_borrowers: '/borrowers',
+  borrower_api: '/borrower/',
+  deleteAuthor: '/deleteAuthor/',
   get_all_authors: '/authors',
   single_author: '/author'
 };
