@@ -31,6 +31,7 @@ import { AuthorDeleteComponent } from './admin/authors/delete/delete.component';
 import { NewBranchComponent } from './admin/branches/new/new.component';
 import { BranchEditComponent } from './admin/branches/edit/edit.component';
 import { BranchDeleteComponent } from './admin/branches/delete/delete.component';
+import { PagerService } from './service/pager.service';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,7 @@ import { BranchDeleteComponent } from './admin/branches/delete/delete.component'
     NgbModule, // TODO: just import the modules we use
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
