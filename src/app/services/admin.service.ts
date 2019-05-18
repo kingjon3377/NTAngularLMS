@@ -30,12 +30,14 @@ export class AdminService {
     return this.http.post(
       environment.api_endpoint +
       environment.admin_endpoint +
-      environment.borrower_api + '?name=' +
-      body.name + '&address=' + body.address +
-      '&phone=' + body.phone,
+      environment.borrower_api,
       // Second parameter is an object you want to pass to the server,
       // it does not have to be JSON stringify
-      {}
+      {
+        name:body.name,
+        address:body.address,
+        phone:body.address
+      }
     );
   }
 
@@ -53,6 +55,7 @@ export class AdminService {
     return this.http.get(
       environment.api_endpoint +
       environment.admin_endpoint +
+      '/' + 'admin' +
       environment.get_all_borrowers + '/' +
       cardNo +
       environment.get_all_loans
@@ -65,10 +68,13 @@ export class AdminService {
       environment.admin_endpoint + '/loan' +
       environment.book_api + bookId +
       environment.branch_api + branchId +
-      environment.borrower_api + cardNo + '/due?dueDate=' + overrideDate,
+      environment.borrower_api + cardNo + '/due',
+      // + '/due?dueDate=' + overrideDate,
       // Second parameter is an object you want to pass to the server,
       // it does not have to be JSON stringify
-      {}
+      {
+        dueDate:overrideDate
+      }
     );
   }
 }
